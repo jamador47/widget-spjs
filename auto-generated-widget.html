@@ -1752,63 +1752,7 @@ chilipeppr.publish("/com-chilipeppr-widget-serialport/send", "G1 X10 F500\\n");
                 //try {
                     data = $.parseJSON(msg);
 
-                    if ('P' in data && data.P == serialPort  && JSON.parse(data.D).er.msg == "Soft limit exceeded") {
-                    
-                    var data = data.D;
-                                var mensaje = JSON.parse(data).er.msg;
-                                if (mensaje == "Soft limit exceeded" && parseadaanterior != mensaje){
-                                   alert("Un eje fue movido más alla de los límites, presione RESET para continuar usando la máquina");
-                
-                                    }
-                           
-                                    parseadaanterior = mensaje;
-                                   
-                                   
-                                   /*
-                                   
-                                   if(data != undefined && data.D=="Y position:          0.000 mm\n"){
-                                    //alert(data);
-                                        
-                                        if (yaavisonohome == 0){
-                                         document.getElementById("indicadorhome").className = "led-yellow";
-                                         $('#com-chilipeppr-widget-gcode-play').prop("disabled", true);
-                                         var cmd  = "$xvm=5000";
-               chilipeppr.publish("/com-chilipeppr-widget-serialport/ws/send", "send " + serialPort + " " + cmd);
-                                         var cmd  = "$yvm=5000";
-               chilipeppr.publish("/com-chilipeppr-widget-serialport/ws/send", "send " + serialPort + " " + cmd);
-                                         var cmd  = "$avm=5000";
-               chilipeppr.publish("/com-chilipeppr-widget-serialport/ws/send", "send " + serialPort + " " + cmd);
-                                         var cmd  = "$zvm=1500";
-               chilipeppr.publish("/com-chilipeppr-widget-serialport/ws/send", "send " + serialPort + " " + cmd);
-                                               yaavisonohome = 1;
-                              }          
-                                        
-                                }
-                                    if(data != undefined && data.match(/Y position:          1.000 mm\n/i)){
-                                    //alert(data);
-                                                                       
-                                        document.getElementById("indicadorhome").className = "led-off";
-            
-                                            if (yaenhome == 0){
-                                             $('#com-chilipeppr-widget-gcode-play').prop("disabled", false);
-                                           var cmd  = "$xvm=20000";
-               chilipeppr.publish("/com-chilipeppr-widget-serialport/ws/send", "send " + serialPort + " " + cmd);
-                                         var cmd  = "$yvm=20000";
-               chilipeppr.publish("/com-chilipeppr-widget-serialport/ws/send", "send " + serialPort + " " + cmd);
-                                         var cmd  = "$avm=20000";
-               chilipeppr.publish("/com-chilipeppr-widget-serialport/ws/send", "send " + serialPort + " " + cmd);
-                                         var cmd  = "$zvm=5000";
-               chilipeppr.publish("/com-chilipeppr-widget-serialport/ws/send", "send " + serialPort + " " + cmd);
-               yaenhome = 1;
-            yaavisonohome = 1;                       
-            
-            }
-                                        
-                                }*/
-                                
-                                
-                                  
-                            }
+                   
                 /*
                 } catch (e) {
                     // error
