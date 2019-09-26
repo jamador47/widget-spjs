@@ -1752,10 +1752,10 @@ chilipeppr.publish("/com-chilipeppr-widget-serialport/send", "G1 X10 F500\\n");
                 //try {
                     data = $.parseJSON(msg);
 
-                    if ('P' in data && data.P == serialPort  && json.Parse(data.D).er.msg == "Soft limit exceeded") {
+                    if ('P' in data && data.P == serialPort  && JSON.Parse(data.D).er.msg == "Soft limit exceeded") {
                     
                     var data = data.D;
-                                var mensaje =json.Parse(data).er.msg;
+                                var mensaje = JSON.Parse(data).er.msg;
                                 if (mensaje == "Soft limit exceeded" && parseadaanterior != mensaje){
                                    alert("Un eje fue movido más alla de los límites, presione RESET para continuar usando la máquina");
                 
@@ -2986,7 +2986,7 @@ chilipeppr.publish("/com-chilipeppr-widget-serialport/send", "G1 X10 F500\\n");
                 <button type="button" class="btn btn-xs btn-default disconnect" data-toggle="popover" data-placement="auto" data-container="body" data-content="Disconnect from Serial Port JSON Server" data-trigger="hover"><span class="glyphicon glyphicon-remove-sign"></span></button>
             </div>
             <div class="title" style="">
-                <span class="panel-title">Serial Port JSON Server 
+                <span class="panel-title">Serial Port JSON1 Server 
                 <span class="serial-port-version"></span>
                 <div class="subtitle hidden">Multi Port Mode</div>
                 <div class="hosttitle"></div>
